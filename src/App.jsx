@@ -14,11 +14,12 @@ export default function App() {
 
     return (
         <div className="App">
-            { users.length === 0
+            {
+                users.length === 0
                 ?   <Spinner/>
-                :   <div>
-                    {users.map((user, key) => <div key={key}>{user.name}</div>)}
-                </div>
+                :   <div className='users'>
+                        {users.map((user, key) => <div key={key}>{user.name}</div>)}
+                    </div>
             }
         </div>
     );
